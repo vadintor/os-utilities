@@ -1,0 +1,8 @@
+[Unit]
+After=network.service
+
+[Service]
+ExecStart=/usr/local/bin/ipmicfg -raw 0x30 0x70 0x66 0x01 0x00 0x32
+
+[Install]
+WantedBy=default.target
